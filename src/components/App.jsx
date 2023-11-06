@@ -7,7 +7,7 @@ import css from './App.module.css';
 
 export const App = () => {
   const [filter, setFilter] = useState('');
-  const [contacts, setContacts] = useState([], () => {
+  const [contacts, setContacts] = useState(() => {
     const stringifiedContacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(stringifiedContacts) ?? [];
     return parsedContacts;
